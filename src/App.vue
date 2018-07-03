@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
+    <span>12</span>
   </div>
 </template>
 
