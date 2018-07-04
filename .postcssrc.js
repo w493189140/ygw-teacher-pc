@@ -4,7 +4,14 @@ module.exports = {
   "plugins": {
     "postcss-import": {},
     "postcss-url": {},
-    // to edit target browsers: use "browserslist" field in package.json
-    "autoprefixer": {}
+    "postcss-aspect-ratio-mini": {},
+    "postcss-write-svg": { utf8: false },
+    "postcss-cssnext": {},
+    "postcss-viewport-units":{},
+    "cssnano": {
+      preset: "advanced",
+      autoprefixer: false,
+      "postcss-zindex": false
+    }
   }
 }

@@ -1,0 +1,24 @@
+body,html{
+  height: 100%;
+}
+#app{
+  min-height: 100%;
+  position: relative;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.header .el-input__inner{
+  height: 35px;
+}
+.header .el-input__icon{
+  line-height: 35px;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #2dcbb5;
+}
