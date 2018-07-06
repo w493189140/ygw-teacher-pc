@@ -33,6 +33,10 @@ body {
     font-size: 14px;
     color: #272727;
     background: #fff;
+
+}
+body{
+  overflow-y: scroll;
 }
 /*各浏览器显示不同，去掉蓝色边框*/
 fieldset, img, input, button {
@@ -55,4 +59,7 @@ fieldset, img, input, button {
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
+}
+a{
+  color:inherit ;
 }

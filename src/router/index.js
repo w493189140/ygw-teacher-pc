@@ -8,7 +8,7 @@ import live from '@/components/main/live/live'
 import teachData from '@/components/main/teachData/teachData'
 import lookData from '@/components/main/lookData/lookData'
 import service from '@/components/main/service/service'
-// import home from '@/components/main/home/home'
+import liveList from '@/components/main/liveList/liveList'
 
 //播放页 全屏
 import play from '@/components/play/play'
@@ -29,45 +29,89 @@ export default new Router({
     {
       path: '/',
       component: main,
+      meta: {
+        title: '首页'
+      },
       children:[
         {
           path: '/',
           component: home,
+          meta: {
+            title: '首页'
+          },
         },
         {
           path: '/home',
           component: home,
+          meta: {
+            title: '首页'
+          },
         },
         {
           path: '/login',
-          component: login
+          component: login,
+          meta: {
+            title: '登录'
+          },
         },
         {
           path: '/train',
-          component: train
+          component: train,
+          meta: {
+            title: '教学培训'
+          },
+        },
+        {
+          path: '/liveList',
+          component: liveList,
+          meta: {
+            title: '教学直播'
+          },
         },
         {
           path: '/teachData',
-          component: teachData
+          component: teachData,
+          meta: {
+            title: '教学资料'
+          },
         },
         {
           path: '/lookData',
-          component: lookData
+          component: lookData,
+          meta: {
+            title: '参考资料'
+          },
         },
         {
           path: '/service',
-          component: service
+          component: service,
+          meta: {
+            title: '服务平台'
+          },
         },
+
       ]
     },
     {
       path: '/live',
-      component: live
+      component: live,
+      meta: {
+        title: '视频直播'
+      }
     },
-
+    {
+      path: '/play',
+      component: play,
+      meta: {
+        title: '视频点播'
+      }
+    },
     {
       path: '*',
-      component: error
+      component: error,
+      meta: {
+        title: '404'
+      }
     }
   ]
 })

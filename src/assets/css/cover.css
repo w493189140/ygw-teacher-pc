@@ -15,6 +15,9 @@ body,html{
 .header .el-input__inner{
   height: 35px;
 }
+.header .el-input__inner{
+  line-height: 35px;
+}
 .header .el-input__icon{
   line-height: 35px;
 }

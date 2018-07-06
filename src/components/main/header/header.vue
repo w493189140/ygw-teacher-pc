@@ -6,15 +6,17 @@
         <ul class="f_left nav clearfix">
           <router-link tag="li" to="/home">首页</router-link>
           <router-link tag="li" to="/train">教学培训</router-link>
-          <router-link tag="li" to="/live">教学直播</router-link>
+          <router-link tag="li" to="/liveList">教学直播</router-link>
+          <!--<li>-->
+            <!--<a href="/live" target="_blank">教学直播</a>-->
+          <!--</li>-->
           <router-link tag="li" to="/teachData">教学资料</router-link>
           <router-link tag="li" to="/lookData">参考资料</router-link>
           <router-link tag="li" to="/service">服务平台</router-link>
         </ul>
       </div>
       <div class="f_right right-side">
-        <el-input class="seach-input"
-                  placeholder="请输入内容" v-model="seachText">
+        <el-input class="seach-input" placeholder="搜索关键字" v-model="seachText" @keyup.enter.native="searchAll">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
         <el-dropdown>
@@ -22,7 +24,7 @@
             个人中心
           </span>
           <el-dropdown-menu slot="dropdown" class="dropdown">
-            <el-dropdown-item>退出登录</el-dropdown-item>
+            <el-dropdown-item @click.native="shutDown">退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
@@ -40,12 +42,18 @@
       }
     },
     methods:{
+      shutDown:function(){
+        console.log('tuichu')
+      },
       toHome:function(){
-
+        this.$router.push('/home')
       },
       toPersonal:function () {
-
+        console.log('person')
       },
+      searchAll:function (e) {
+       console.log(this.seachText)
+      }
     }
   }
 </script>
@@ -68,6 +76,23 @@
       text-align: center;
       line-height: 46px;
       cursor: pointer;
+
+      &:hover{
+        color: @color;
+        position: relative;
+        &:before{
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 4px;
+          background-color: @color;
+          border-radius: 2px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
     }
     .router-link-active{
       color: @color;

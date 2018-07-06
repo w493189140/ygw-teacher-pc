@@ -40,7 +40,8 @@
 </template>
 
 <script>
-
+  import api from '@/api/api'
+  import ajax from '@/utils/fetch.js'
 export default {
   data () {
     return {
@@ -48,13 +49,18 @@ export default {
     }
   },
   mounted(){
-    this.initSweiper()
+    this._initSweiper()
+    ajax.get(api.query_task_detail,this.parems).then((res)=>{
+        console.log(res)
+    }).catch((error) => {
+      console.log(error)
+    });
   },
   components:{
 
   },
   methods: {
-    initSweiper:function () {
+    _initSweiper:function () {
       this.mySwiper = new Swiper ('.swiper-container', {
         loop: true,
         autoplay:true,
