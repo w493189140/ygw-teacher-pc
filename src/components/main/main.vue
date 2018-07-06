@@ -13,10 +13,7 @@ import footer from '@/components/main/footer/footer'
 export default {
   data () {
     return {
-      parems:{
-        id:'53',
-        type:'2'
-      }
+
     }
   },
   components:{
@@ -34,4 +31,7 @@ export default {
 
 <style scoped lang="less">
   @import "../../assets/css/base.less";
+  .container{
+    padding-bottom: 100px;
+  }
 </style>

@@ -3,6 +3,7 @@ import axios from 'axios'
 import qs from 'qs'
 import { MessageBox  } from 'element-ui'
 import router from '../router'
+const root = process.env.API_ROOT
 
 let cancel ,promiseArr = {}
 const CancelToken = axios.CancelToken;
@@ -89,11 +90,12 @@ axios.interceptors.response.use(response => {
 })
 
 localStorage.setItem('token','6a3c77c825d40e1502c1cb61f64cbaa7 0')
-axios.defaults.baseURL = 'http://106.14.181.54:8082'
+axios.defaults.baseURL = root
+console.log(root)
 //设置默认请求头
 axios.defaults.headers = {
   'X-Requested-With': 'XMLHttpRequest',
-  "ygwo_token":localStorage.getItem('token')
+  "ygwo_token":localStorage.getItem('token')||undefined
 }
 axios.defaults.timeout = 10000
 

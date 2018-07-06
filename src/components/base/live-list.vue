@@ -1,7 +1,8 @@
 <template>
     <div class="list">
       <div class="img-box">
-        <img src="@/assets/image/video-bg.jpg" alt="封面">
+        <img v-lazy="imgUrl" alt="封面">
+        <!--<img src="/static/img/video-bg.09ef916.jpg" alt="封面">-->
         <div class="img-mask iconfont icon-start">
         </div>
         <span class="time">2015-02</span>
@@ -15,8 +16,13 @@
 </template>
 
 <script>
+  import url from '../../assets/image/video-bg.jpg'
     export default {
-
+        data(){
+          return{
+            imgUrl:url//require('../../assets/image/video-bg.jpg')
+          }
+        }
     }
 </script>
 

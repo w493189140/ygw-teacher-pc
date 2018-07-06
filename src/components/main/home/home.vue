@@ -40,21 +40,22 @@
 </template>
 
 <script>
-  import api from '@/api/api'
-  import ajax from '@/utils/fetch.js'
+import api from '@/api/api'
+import ajax from '@/utils/fetch.js'
 export default {
   data () {
     return {
-
+      parems:{
+        id:'53',
+        type:'2'
+      }
     }
   },
   mounted(){
     this._initSweiper()
     ajax.get(api.query_task_detail,this.parems).then((res)=>{
-        console.log(res)
-    }).catch((error) => {
-      console.log(error)
-    });
+        console.log(res.data)
+    })
   },
   components:{
 

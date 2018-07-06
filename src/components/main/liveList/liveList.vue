@@ -11,7 +11,7 @@
     data() {
       return {
         navName: '公共课程',
-        liveList:[1,2,3,4],
+        liveList:[1,2,3,4,5,56,6,6,6,6,6,6,6,],
         lodeMoreBtn:true
       }
     },

@@ -9,7 +9,12 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
-
+//vueLazyload
+import VueLazyLoad from 'vue-lazyload'
+Vue.use(VueLazyLoad,{
+  error:require('./assets/image/404.jpg'),
+  loading:require('./assets/image/logo.png')
+})
 
 Vue.config.productionTip = false
 
