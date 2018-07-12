@@ -4,15 +4,15 @@
       <div class="f_left clearfix">
         <img class="f_left logo" src="@/assets/image/logo.png" alt="logo" @click="toHome">
         <ul class="f_left nav clearfix">
-          <router-link tag="li" to="/home">首页</router-link>
-          <router-link tag="li" to="/train">教学培训</router-link>
-          <router-link tag="li" to="/liveList">教学直播</router-link>
+          <router-link class="head-nav" tag="li" to="/home">首页</router-link>
+          <router-link class="head-nav train" tag="li" to="/train">培训</router-link>
+          <router-link class="head-nav" tag="li" to="/liveList">直播</router-link>
           <!--<li>-->
             <!--<a href="/live" target="_blank">教学直播</a>-->
           <!--</li>-->
-          <router-link tag="li" to="/teachData">教学资料</router-link>
-          <router-link tag="li" to="/lookData">参考资料</router-link>
-          <router-link tag="li" to="/service">服务平台</router-link>
+          <router-link class="head-nav" tag="li" to="/teachData">教学资料</router-link>
+          <router-link class="head-nav" tag="li" to="/lookData">参考资料</router-link>
+          <router-link class="head-nav" tag="li" to="/service">教学服务</router-link>
         </ul>
       </div>
       <div class="f_right right-side">
@@ -61,18 +61,22 @@
 <style scoped lang="less">
   @import "../../../assets/css/base.less";
   .header {
-    font-size: 14px;
+    font-size: 16px;
     height: 70px;
     border-bottom: 1px solid #e7e7e7;
     padding-top: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(238,238,238,0.50);
   }
   .logo{
     cursor: pointer;
+    margin-right: 60px;
   }
   .nav{
     li{
       float: left;
-      width: 110px;
+      /*width: 110px;*/
+      padding: 0 20px;
       text-align: center;
       line-height: 46px;
       cursor: pointer;
@@ -108,6 +112,7 @@
         left: 0;
         right: 0;
         margin: auto;
+        box-shadow: 0 2px 7px 0 rgba(45,203,181,0.56);
       }
     }
   }
@@ -115,8 +120,8 @@
     padding-top: 5px;
   }
   .seach-input {
-    width: 150px;
-    height: 35px;
+    width: 200px;
+    height: 36px;
     margin-right: 20px;
     .el-input__inner{
       height: 35px;

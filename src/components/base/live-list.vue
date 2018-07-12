@@ -2,7 +2,7 @@
     <div class="list">
       <div class="img-box">
         <img v-lazy="imgUrl" alt="封面">
-        <!--<img src="/static/img/video-bg.09ef916.jpg" alt="封面">-->
+        <!--<testfile src="/static/testfile/video-bg.09ef916.jpg" alt="封面">-->
         <div class="img-mask iconfont icon-start">
         </div>
         <span class="time">2015-02</span>

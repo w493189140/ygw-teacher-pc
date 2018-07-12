@@ -9,6 +9,9 @@ import teachData from '@/components/main/teachData/teachData'
 import lookData from '@/components/main/lookData/lookData'
 import service from '@/components/main/service/service'
 import liveList from '@/components/main/liveList/liveList'
+import contribute from '@/components/main/contribute/contribute'
+import activity from '@/components/main/home/activity'
+import notice from '@/components/main/home/notice'
 
 //播放页 全屏
 import play from '@/components/play/play'
@@ -48,12 +51,20 @@ export default new Router({
           },
         },
         {
-          path: '/login',
-          component: login,
+          path: '/activity',
+          component: activity,
           meta: {
-            title: '登录'
+            title: '首页'
           },
         },
+        {
+          path: '/notice',
+          component: notice,
+          meta: {
+            title: '首页'
+          },
+        },
+
         {
           path: '/train',
           component: train,
@@ -89,6 +100,13 @@ export default new Router({
             title: '服务平台'
           },
         },
+        {
+          path: '/contribute',
+          component: contribute,
+          meta: {
+            title: '投稿'
+          },
+        },
 
       ]
     },
@@ -105,6 +123,13 @@ export default new Router({
       meta: {
         title: '视频点播'
       }
+    },
+    {
+      path: '/login',
+      component: login,
+      meta: {
+        title: '登录'
+      },
     },
     {
       path: '*',

@@ -22,6 +22,13 @@ Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title
+
+    if(to.path =="/home"){
+      setTimeout(()=>{
+        console.log(document.querySelectorAll('.train')[0])
+        document.querySelectorAll('.train')[0].classList.add("active")
+      },20)
+    }
   }
   next()
 })

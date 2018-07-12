@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <v-header></v-header>
+    <v-sidebar></v-sidebar>
     <router-view></router-view>
     <v-footer></v-footer>
   </div>
@@ -9,6 +10,7 @@
 <script>
 import header from '@/components/main/header/header'
 import footer from '@/components/main/footer/footer'
+import sidebar from '@/components/main/sidebar/sidebar'
 
 export default {
   data () {
@@ -18,7 +20,8 @@ export default {
   },
   components:{
     'v-header':header,
-    'v-footer':footer
+    'v-footer':footer,
+    'v-sidebar':sidebar,
   },
   mounted(){
 
