@@ -6,7 +6,7 @@
         <ul class="f_left nav clearfix">
           <router-link class="head-nav" tag="li" to="/home">首页</router-link>
           <router-link class="head-nav train" tag="li" to="/train">培训</router-link>
-          <router-link class="head-nav" tag="li" to="/liveList">直播</router-link>
+          <router-link class="head-nav" tag="li" to="/liveMain">直播</router-link>
           <!--<li>-->
             <!--<a href="/live" target="_blank">教学直播</a>-->
           <!--</li>-->

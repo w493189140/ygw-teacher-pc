@@ -83,5 +83,9 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
+  },
+  externals: {
+    'goEasy': 'goEasy',
+    'prismplayer': 'prismplayer'
   }
 }

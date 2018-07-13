@@ -1,10 +1,8 @@
 <template>
   <div class="list">
     <div class="img-box">
-      <img src="@/assets/image/video-bg.jpg" alt="封面">
-      <div class="img-mask iconfont icon_play">
+      <div class=" iconfont icon_play">
       </div>
-      <span class="time">26:37</span>
     </div>
     <div class="detail">
       <h3>我是标题表肯定撒货我是标题表肯定撒货我是标题表肯定撒货我是标题表肯定撒货我是标题表肯定撒货我是标题表肯定撒货我是标题表肯定撒货</h3>
@@ -31,48 +29,20 @@
     border-radius: 2px;
     overflow: hidden;
   }
-
-  .list:hover .img-mask {
-    opacity: 1;
-  }
-
   .list:hover {
     box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1);
   }
-
   .img-box {
     width: 100%;
     height: 158px;
     position: relative;
     overflow: hidden;
-    .img-mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      transition: all .5s;
-    }
+    background-color: #020;
     .icon_play {
       font-size: 78px;
       color: rgba(255, 255, 255, 0.8);
       text-align: center;
       line-height: 160px;
-    }
-    .time{
-      position: absolute;
-      width: 48px;
-      height: 26px;
-      line-height: 26px;
-      text-align: center;
-      right:8px ;
-      bottom:8px;
-      font-size: 12px;
-      color: #FFFFFF;
-      background: rgba(47, 49, 66, 0.8);
-      border-radius: 2px;
     }
   }
   .detail{

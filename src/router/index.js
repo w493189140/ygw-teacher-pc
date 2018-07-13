@@ -6,14 +6,15 @@ import home from '@/components/main/home/home'
 import activity from '@/components/main/home/activity'
 import notice from '@/components/main/home/notice'
 import live from '@/components/main/live/live'
-import teachData from '@/components/main/teachData/teachData'
-import lookData from '@/components/main/lookData/lookData'
+import teachData from '@/components/main/teachData/teach_data'
+import lookData from '@/components/main/lookData/look_data'
 import service from '@/components/main/service/service'
-import liveList from '@/components/main/liveList/liveList'
+import liveMain from '@/components/main/liveMain/live_main'
 import contribute from '@/components/main/contribute/contribute'
 import train from '@/components/main/train/train'
 import trainChapter from '@/components/main/train/train_chapter'
 import trainChapterDatail from '@/components/main/train/train_chapter_datail'
+import trainVideo from '@/components/main/train/train_video'
 
 //播放页 全屏
 import play from '@/components/play/play'
@@ -88,8 +89,15 @@ export default new Router({
           },
         },
         {
-          path: '/liveList',
-          component: liveList,
+          path: '/trainVideo',
+          component: trainVideo,
+          meta: {
+            title: '教学培训'
+          },
+        },
+        {
+          path: '/liveMain',
+          component: liveMain,
           meta: {
             title: '教学直播'
           },

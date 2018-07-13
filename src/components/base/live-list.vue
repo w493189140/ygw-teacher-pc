@@ -1,26 +1,29 @@
 <template>
     <div class="list">
       <div class="img-box">
-        <img v-lazy="imgUrl" alt="封面">
-        <!--<testfile src="/static/testfile/video-bg.09ef916.jpg" alt="封面">-->
-        <div class="img-mask iconfont icon-start">
+        <img src="../../assets/image/video-bg.jpg" alt="封面">
+        <div class="img-mask iconfont icon_play">
         </div>
-        <span class="time">2015-02</span>
+        <span class="state">正在直播</span>
       </div>
       <div class="info">
         <h3>我是标题表肯定撒发货我是标题表肯定撒发货我是标题表肯定撒发货我是标题表肯定撒发货</h3>
-        <p class="des">描述藐视描述描述束带结发描述描述藐视描述描述束带结发描述描述藐视描述描述束带结发描述描述藐视描述描述束带结发描述</p>
-        <p class="time">2018-06-29</p>
+        <div class="teacher clearfix">
+          <div class="f_left clearfix">
+            <span class="head-img img-box f_left"><img :src="avatarDefault" alt="头像"></span>
+            <span class="name f_left">葫芦娃</span>
+          </div>
+          <div class="f_right number">142 人正在观看</div>
+        </div>
       </div>
     </div>
 </template>
 
 <script>
-  import url from '../../assets/image/video-bg.jpg'
     export default {
         data(){
           return{
-            imgUrl:url//require('../../assets/image/video-bg.jpg')
+            avatarDefault:require("@/assets/image/Avatar_Default.png"),
           }
         }
     }
@@ -28,15 +31,23 @@
 
 <style scoped lang="less">
   @import "../../assets/css/base";
-  .icon-start:before{content: '\e61a'}
-  .list{
-    width: 286px;
+  .icon_play:before {
+    content: '\e75c'
   }
-  .list :hover .img-mask{
+  .list{
+    width: 280px;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .list:hover {
+    box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+  .list:hover .img-mask{
     opacity: 1;
   }
   .img-box{
-    width: 286px;
+    width: 280px;
     height: 160px;
     position: relative;
     border-radius: 2px;
@@ -51,35 +62,51 @@
       opacity: 0;
       transition: all .5s;
     }
-    .icon-start{
-      font-size: 60px;
+    .icon_play{
+      font-size: 70px;
       color: rgba(255,255,255,0.8);
       text-align: center;
       line-height: 160px;
     }
-    .time{
+    .state{
       position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 80px;
-      height: 40px;
-      line-height: 40px;
+      bottom: 8px;
+      right: 8px;
+      width: 64px;
+      height:26px;
+      line-height: 26px;
       color: #fff;
       text-align: center;
-      background-color: rgba(0,0,0,0.4);
+      background-color: rgba(251, 78, 82, 0.9);
     }
   }
   .info{
+    height: 107px;
+    background: #F9F9F9;
+    padding: 15px;
     h3{
       .twoline;
-      font-size: 16px;
+      font-size: 14px;
+      color: #2F3142;
       font-weight: 600;
+      margin-bottom: 10px;
     }
-    .des{
-      .oneline;
+    .head-img{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
     }
-    .time{
+    .name{
+      color: #2F3142;
+      line-height: 30px;
+      margin-left: 8px;
+    }
+    .number{
+      color: #FB4E52;
+      line-height: 30px;
+    }
 
-    }
   }
 </style>

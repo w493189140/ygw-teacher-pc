@@ -12,13 +12,13 @@
       <div class="content-item">
         <h4>视频文件</h4>
         <div class="video-box clearfix">
-          <v-trainVideoList class="video-list" v-for="(item,index) in dataList" :data="item" :key="index"></v-trainVideoList>
+          <v-trainVideoList @click.native="toTrainVideo" class="video-list" v-for="(item,index) in dataList" :data="item" :key="index"></v-trainVideoList>
         </div>
       </div>
       <div class="content-item">
         <h4>视频文件</h4>
         <div class="video-box clearfix">
-          <v-trainVideoList class="video-list" v-for="(item,index) in dataList" :data="item" :key="index"></v-trainVideoList>
+          <v-trainFileList class="video-list" v-for="(item,index) in dataList" :data="item" :key="index"></v-trainFileList>
         </div>
       </div>
     </div>
@@ -27,6 +27,7 @@
 
 <script>
   import trainVideoList from '@/components/base/train-video-list'
+  import trainFileList from '@/components/base/train-file-list'
   export default {
     data(){
       return{
@@ -34,12 +35,15 @@
       }
     },
     components:{
-        'v-trainVideoList':trainVideoList
+        'v-trainVideoList':trainVideoList,
+        'v-trainFileList':trainFileList
     },
     mounted(){
     },
     methods:{
-
+      toTrainVideo:function () {
+        this.$router.push('/trainVideo')
+      }
     }
   }
 </script>
