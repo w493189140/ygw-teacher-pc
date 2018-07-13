@@ -74,6 +74,7 @@
       font-size: 12px;
       color: rgba(47,49,66,0.56);
       line-height: 16px;
+      height:32px;
     }
   }
 </style>

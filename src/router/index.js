@@ -3,15 +3,17 @@ import Router from 'vue-router'
 //主页 版心
 import main from '@/components/main/main'
 import home from '@/components/main/home/home'
-import train from '@/components/main/train/train'
+import activity from '@/components/main/home/activity'
+import notice from '@/components/main/home/notice'
 import live from '@/components/main/live/live'
 import teachData from '@/components/main/teachData/teachData'
 import lookData from '@/components/main/lookData/lookData'
 import service from '@/components/main/service/service'
 import liveList from '@/components/main/liveList/liveList'
 import contribute from '@/components/main/contribute/contribute'
-import activity from '@/components/main/home/activity'
-import notice from '@/components/main/home/notice'
+import train from '@/components/main/train/train'
+import trainChapter from '@/components/main/train/train_chapter'
+import trainChapterDatail from '@/components/main/train/train_chapter_datail'
 
 //播放页 全屏
 import play from '@/components/play/play'
@@ -64,10 +66,23 @@ export default new Router({
             title: '首页'
           },
         },
-
         {
           path: '/train',
           component: train,
+          meta: {
+            title: '教学培训'
+          },
+        },
+        {
+          path: '/trainChapter',
+          component: trainChapter,
+          meta: {
+            title: '教学培训'
+          },
+        },
+        {
+          path: '/trainChapterDatail',
+          component: trainChapterDatail,
           meta: {
             title: '教学培训'
           },

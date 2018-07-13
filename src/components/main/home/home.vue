@@ -2,11 +2,11 @@
   <div class="container w">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide" @click="toActivity(1)">
           <img src="./home_img_banner.png" alt="banner">
         </div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide" @click="toActivity(2)">Slide 2</div>
+        <div class="swiper-slide" @click="toActivity(3)">Slide 3</div>
       </div>
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination"></div>
@@ -22,8 +22,9 @@
     </div>
     <div class="content clearfix">
       <div class="main f_left">
-        <div class="main-list">
+        <div class="main-list" @click="toActivity(1)">
           <div class="img-box f_left list-img" v-bind:style="{ backgroundImage: 'url('+testImg2+')' }">
+
           </div>
           <div class="info f_right">
             <h3 class="title">[新进导师培训]-课堂教学方法与教学能力提升</h3>
@@ -38,7 +39,7 @@
             </div>
           </div>
         </div>
-        <div class="main-list">
+        <div class="main-list" @click="toActivity(1)">
           <div class="img-box f_left list-img" v-bind:style="{ backgroundImage: 'url('+testImg3+')' }">
             <!--<img src="../../testfile/home_img_cover_04.png" alt="">-->
           </div>
@@ -55,7 +56,7 @@
             </div>
           </div>
         </div>
-        <div class="main-list">
+        <div class="main-list" @click="toActivity(1)">
           <div class="img-box f_left list-img">
             <img :src="testImg2" alt="">
           </div>
@@ -72,7 +73,7 @@
             </div>
           </div>
         </div>
-        <div class="main-list">
+        <div class="main-list" @click="toActivity(1)">
           <div class="img-box f_left list-img">
             <img :src="testImg2" alt="">
           </div>
@@ -89,7 +90,7 @@
             </div>
           </div>
         </div>
-        <div class="main-list">
+        <div class="main-list" @click="toActivity(1)">
           <div class="img-box f_left list-img">
             <img :src="testImg3" alt="">
           </div>
@@ -106,7 +107,7 @@
             </div>
           </div>
         </div>
-        <div class="main-list">
+        <div class="main-list"  @click="toActivity(1)">
           <div class="img-box f_left list-img">
             <img src="../../testfile/home_img_cover_04.png" alt="">
           </div>
@@ -130,14 +131,14 @@
       <div class="news f_right">
         <h3 class="title"><span class="iconfont icon_sound-fill"></span>最新公告</h3>
         <ul class="info">
-          <li>34届（2018年）楚才杯喜报公示</li>
-          <li>阳光喔参与国家《民办教育蓝皮…</li>
-          <li>34打开事件发生可是大家发十大风水大忌疯狂的十六分34打开事件发生可是大家发十大风水大忌疯狂的十六分</li>
-          <li>34打开事件发生可是大家发十大风水大忌疯狂的dsdsa十六分</li>
-          <li>34打开事件发生可是大家发sadsa疯狂的十六分</li>
-          <li>34打开事件发生dssdssa大忌疯狂的十六分</li>
-          <li>34打开事件发生可是大家发十大风水大忌疯狂的十六分</li>
-          <li>34打开事件发生可是大家发十大风水大忌疯狂的十六分</li>
+          <li @click="toNotice(1)">34届（2018年）楚才杯喜报公示</li>
+          <li @click="toNotice(2)">阳光喔参与国家《民办教育蓝皮…</li>
+          <li @click="toNotice(3)">34打开事件发生可是大家发十大风水大忌疯狂的十六分34打开事件发生可是大家发十大风水大忌疯狂的十六分</li>
+          <li @click="toNotice(4)">34打开事件发生可是大家发十大风水大忌疯狂的dsdsa十六分</li>
+          <li @click="toNotice(5)">34打开事件发生可是大家发sadsa疯狂的十六分</li>
+          <li @click="toNotice(6)">34打开事件发生dssdssa大忌疯狂的十六分</li>
+          <li @click="toNotice(7)">34打开事件发生可是大家发十大风水大忌疯狂的十六分</li>
+          <li @click="toNotice(8)">34打开事件发生可是大家发十大风水大忌疯狂的十六分</li>
         </ul>
       </div>
     </div>
@@ -191,6 +192,14 @@ export default {
         //   el: '.swiper-scrollbar',
         // },
       })
+    },
+    toActivity:function (id) {
+      console.log(id)
+      this.$router.push('/activity')
+    },
+    toNotice:function (id) {
+      console.log(id)
+      this.$router.push('/notice')
     }
   }
 }
@@ -208,6 +217,7 @@ export default {
     .swiper-slide{
       border-radius: 4px;
       font-size: 0;
+      cursor: pointer;
       &:nth-child(2n){
         background-color: #eee;
       }

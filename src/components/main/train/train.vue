@@ -18,7 +18,7 @@
      </ul>
     </div>
     <div class="clearfix main">
-      <v-video-list class="video-list" v-for="(item,index) in videoList" :data="item" :key="index"></v-video-list>
+      <v-video-list class="video-list" @click.native="toChapter" v-for="(item,index) in videoList" :data="item" :key="index"></v-video-list>
     </div>
     <div class="load-more" v-if="loadMoreBtn">点击加载更多</div>
   </div>
@@ -46,7 +46,11 @@ export default {
     },
     loadMoreBtn:function () {
 
+    },
+    toChapter:function () {
+      this.$router.push('/trainChapter')
     }
+
   }
 }
 </script>

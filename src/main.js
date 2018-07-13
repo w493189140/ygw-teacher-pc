@@ -22,7 +22,7 @@ Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title
-
+    window.scrollTo(0, 0)
     if(to.path =="/home"){
       setTimeout(()=>{
         console.log(document.querySelectorAll('.train')[0])
