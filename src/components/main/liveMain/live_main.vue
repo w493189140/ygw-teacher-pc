@@ -7,7 +7,7 @@
       </el-breadcrumb>
     </div>
     <div class="video-list clearfix">
-      <v-live-list class="list" v-for="(item,index) in liveList" :key="index"></v-live-list>
+      <v-live-list class="list" v-for="(item,index) in liveList"  @click.native="toPlay(item)" :key="index"></v-live-list>
     </div>
     <div class="load-more">
       加载更多…
@@ -37,6 +37,9 @@
       },
       loadMoreBtn:function () {
 
+      },
+      toPlay:function () {
+        this.$router.push('/live')
       }
     }
   }

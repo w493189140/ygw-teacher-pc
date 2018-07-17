@@ -6,7 +6,10 @@ import home from '@/components/main/home/home'
 import activity from '@/components/main/home/activity'
 import notice from '@/components/main/home/notice'
 import live from '@/components/main/live/live'
-import teachData from '@/components/main/teachData/teach_data'
+import play from '@/components/main/live/play'
+import teachData from '@/components/main/teachData/teacher_data'
+import teachChapter from '@/components/main/teachData/teacher_chapter'
+import teacherChapterDetail from '@/components/main/teachData/teacher_chapter_detail'
 import lookData from '@/components/main/lookData/look_data'
 import service from '@/components/main/service/service'
 import liveMain from '@/components/main/liveMain/live_main'
@@ -17,7 +20,7 @@ import trainChapterDatail from '@/components/main/train/train_chapter_datail'
 import trainVideo from '@/components/main/train/train_video'
 
 //播放页 全屏
-import play from '@/components/play/play'
+// import play from '@/components/play/play'
 
 
 //login page
@@ -110,6 +113,20 @@ export default new Router({
           },
         },
         {
+          path: '/teachChapter',
+          component: teachChapter,
+          meta: {
+            title: '教学资料'
+          },
+        },
+        {
+          path: '/teacherChapterDetail',
+          component: teacherChapterDetail,
+          meta: {
+            title: '教学资料'
+          },
+        },
+        {
           path: '/lookData',
           component: lookData,
           meta: {
@@ -138,6 +155,13 @@ export default new Router({
       component: live,
       meta: {
         title: '视频直播'
+      }
+    },
+    {
+      path: '/play',
+      component: play,
+      meta: {
+        title: '视频回放'
       }
     },
     {

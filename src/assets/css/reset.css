@@ -51,11 +51,11 @@ fieldset, img, input, button {
 }
 @font-face {
   font-family: 'iconfont';  /* project id 734794 */
-  src: url('//at.alicdn.com/t/font_734794_2vfj42boa46.eot');
-  src: url('//at.alicdn.com/t/font_734794_2vfj42boa46.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_734794_2vfj42boa46.woff') format('woff'),
-  url('//at.alicdn.com/t/font_734794_2vfj42boa46.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_734794_2vfj42boa46.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_734794_j6jozdki9u.eot');
+  src: url('//at.alicdn.com/t/font_734794_j6jozdki9u.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_734794_j6jozdki9u.woff') format('woff'),
+  url('//at.alicdn.com/t/font_734794_j6jozdki9u.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_734794_j6jozdki9u.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;

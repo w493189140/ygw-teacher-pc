@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="content-item">
-        <h4>视频文件</h4>
+        <h4>标准文件</h4>
         <div class="video-box clearfix">
           <v-trainFileList class="video-list" v-for="(item,index) in dataList" :data="item" :key="index"></v-trainFileList>
         </div>

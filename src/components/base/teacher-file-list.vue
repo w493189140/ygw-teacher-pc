@@ -27,7 +27,7 @@
   }
   .list {
     width: 280px;
-    height: 226px;
+    /*height: 226px;*/
     cursor: pointer;
     transition: all 0.3s;
     background: #F9F9F9;
@@ -52,9 +52,9 @@
   }
   .detail{
     padding: 15px;
-    height: 68px;
+    height: 48px;
     h3 {
-      .twoline;
+      .oneline;
       font-size: 14px;
       color: #2F3142;
       font-weight: 600;

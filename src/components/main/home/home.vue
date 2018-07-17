@@ -280,6 +280,7 @@ export default {
     .list-img{
       width: 280px;
       height: 158px;
+      background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
     }

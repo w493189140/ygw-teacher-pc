@@ -108,14 +108,6 @@
       </div>
 
       <div class="input-box">
-        <div class="toll">
-          <span class="iconfont icon_favorite">点赞</span>
-          <span class="iconfont icon_clear">清屏</span>
-        </div>
-        <div class="input-dv">
-          <el-input class="input" v-model="input" placeholder="请输入内容"></el-input>
-          <el-button class="submit-btn" type="primary" disabled>提交</el-button>
-        </div>
         <p class="copyright">©2018 阳光喔教育科技（上海）有限公司 版权所有  |  问题反馈  |  帮助</p>
       </div>
     </div>
@@ -286,7 +278,7 @@
       overflow: hidden;
       position: absolute;
       top: 320px;
-      bottom:130px;
+      bottom:50px;
       left: 0;
       right: 0;
       margin: auto;
@@ -325,43 +317,19 @@
         width: 380px;
       }
     }
-    .toll{
-      padding: 0 16px;
-      height: 36px;
-      line-height: 36px;
-      color: rgba(47, 49, 66, 0.56);
-      font-size: 12px;
-      .iconfont:before{
-        font-size: 22px;
-        margin-right: 2px;
-      }
-      .iconfont{
-        margin-right: 10px;
-        cursor: pointer;
-      }
-    }
+
     .input-box{
       width: 100%;
-      height: 130px;
+      height: 50px;
       position: absolute;
       bottom:0;
       left: 0;
       box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.1);
     }
-    .input-dv{
-      padding:14px 16px;
-    }
-    .input{
-      width: 348px;
-      height: 36px;
-    }
-    .submit-btn{
-      margin-left: 5px;
-      width: 70px;
-      height: 38px;
-      text-align: center;
-    }
+
+
     .copyright{
+      line-height: 50px;
       font-size: 12px;
       color: rgba(47,49,66,0.32);
       padding-left: 16px;
