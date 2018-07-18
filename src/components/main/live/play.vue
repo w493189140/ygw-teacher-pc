@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="video-box">
-      <div class="video">
+      <div class="video live">
         <div class="prism-player" id="J_prismPlayer"></div>
       </div>
       <div class="video-detail">

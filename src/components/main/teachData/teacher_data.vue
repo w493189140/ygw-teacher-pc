@@ -117,6 +117,7 @@
       cursor: default;
       line-height: 28px;
       color: rgba(0, 0, 0, 0.54);
+      padding-left: 0;
     }
     .title{
       padding-left: 0;

@@ -49,6 +49,7 @@
         this.$router.push('/home')
       },
       toPersonal:function () {
+        this.$router.push('/personal')
         console.log('person')
       },
       searchAll:function (e) {

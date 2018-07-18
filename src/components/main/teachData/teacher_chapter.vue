@@ -9,9 +9,9 @@
     <div class="main">
       <h3 class="title">新进教师教学核心素养——教学认知</h3>
       <p class="des">针对高校新进教师大多对高等教育学、高等教育心理学的基本知识缺乏了解的现状</p>
-      <div>
-        <span>班级作品册</span>
-        <span>学员作品册</span>
+      <div class="toll clearfix">
+        <router-link tag="span" to="/classData">班级作品册</router-link>
+        <router-link tag="span" to="/personalData">学员作品册</router-link>
       </div>
       <div class="detail clearfix">
         <v-teacher-file-list class="item" v-for="(item ,index) in dataList" :key="index" :data="item"></v-teacher-file-list>
@@ -73,7 +73,21 @@
         color: rgba(47,49,66,0.56);
         line-height: 21px;
       }
-
+      .toll{
+        span{
+          width: 138px;
+          text-align: center;
+          height: 50px;
+          line-height: 50px;
+          margin: 24px;
+          margin-left: 0;
+          float: left;
+          background: #F9F9F9;
+          border: 1px solid #EEEEEE;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
     }
     .detail,.chapter{
       margin-top: 24px;

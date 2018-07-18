@@ -5,8 +5,8 @@
         <div class="swiper-slide" @click="toActivity(1)">
           <img src="./home_img_banner.png" alt="banner">
         </div>
-        <div class="swiper-slide" @click="toActivity(2)">Slide 2</div>
-        <div class="swiper-slide" @click="toActivity(3)">Slide 3</div>
+        <!--<div class="swiper-slide" @click="toActivity(2)">Slide 2</div>-->
+        <!--<div class="swiper-slide" @click="toActivity(3)">Slide 3</div>-->
       </div>
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination"></div>

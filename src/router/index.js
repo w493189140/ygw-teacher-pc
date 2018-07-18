@@ -7,10 +7,14 @@ import activity from '@/components/main/home/activity'
 import notice from '@/components/main/home/notice'
 import live from '@/components/main/live/live'
 import play from '@/components/main/live/play'
+import classData from '@/components/main/teachData/class_data'
+import personalData from '@/components/main/teachData/personal_data'
+import classChapter from '@/components/main/teachData/class_chapter'
 import teachData from '@/components/main/teachData/teacher_data'
 import teachChapter from '@/components/main/teachData/teacher_chapter'
 import teacherChapterDetail from '@/components/main/teachData/teacher_chapter_detail'
 import lookData from '@/components/main/lookData/look_data'
+import lookVideo from '@/components/main/lookData/look_video'
 import service from '@/components/main/service/service'
 import liveMain from '@/components/main/liveMain/live_main'
 import contribute from '@/components/main/contribute/contribute'
@@ -18,6 +22,7 @@ import train from '@/components/main/train/train'
 import trainChapter from '@/components/main/train/train_chapter'
 import trainChapterDatail from '@/components/main/train/train_chapter_datail'
 import trainVideo from '@/components/main/train/train_video'
+import personal from '@/components/main/personal/personal'
 
 //播放页 全屏
 // import play from '@/components/play/play'
@@ -64,6 +69,13 @@ export default new Router({
           },
         },
         {
+          path: '/personal',
+          component: personal,
+          meta: {
+            title: '个人中心'
+          },
+        },
+        {
           path: '/notice',
           component: notice,
           meta: {
@@ -106,6 +118,27 @@ export default new Router({
           },
         },
         {
+          path: '/personalData',
+          component: personalData,
+          meta: {
+            title: '教学资料'
+          },
+        },
+        {
+          path: '/classData',
+          component: classData,
+          meta: {
+            title: '教学资料'
+          },
+        },
+        {
+          path: '/classChapter',
+          component: classChapter,
+          meta: {
+            title: '教学资料'
+          },
+        },
+        {
           path: '/teachData',
           component: teachData,
           meta: {
@@ -129,6 +162,13 @@ export default new Router({
         {
           path: '/lookData',
           component: lookData,
+          meta: {
+            title: '参考资料'
+          },
+        },
+        {
+          path: '/lookVideo',
+          component: lookVideo,
           meta: {
             title: '参考资料'
           },

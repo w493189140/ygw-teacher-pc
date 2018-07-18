@@ -10,7 +10,7 @@
       <h3 class="title">新进教师教学核心素养——教学认知</h3>
       <p class="des">针对高校新进教师大多对高等教育学、高等教育心理学的基本知识缺乏了解的现状</p>
       <div class="clearfix content">
-        <div class="f_left">
+        <div class="f_left nav">
           <el-col >
             <el-menu
               default-active="2"
@@ -54,8 +54,24 @@
             </el-menu>
           </el-col>
         </div>
-        <div class="f_right">
-          564654564
+        <div class="f_right info">
+          <div>
+            <h3 class="title">标准文件</h3>
+            <div class="clearfix">
+              <v-teacher-file-detail class="item" v-for="(item,key) in dataList" :key="key"></v-teacher-file-detail>
+            </div>
+          </div>
+          <div>
+            <h3 class="title">上传文件</h3>
+            <div class="clearfix">
+              <v-teacher-file-detail class="item" v-for="(item,key) in dataList" :key="key"></v-teacher-file-detail>
+            </div>
+          </div>
+          <div class="toll clearfix">
+            <span class="f_left upload icon_add iconfont">上传文件</span>
+            <span class="f_right">使用反馈</span>
+          </div>
+
         </div>
       </div>
     </div>
@@ -63,18 +79,16 @@
 </template>
 
 <script>
-  import teacherFileList from '@/components/base/teacher-file-list'
-  import teacherChapterList from '@/components/base/teacher-chapter-list'
+  import teacherFileDetail from '@/components/base/teacher-file-detail'
     export default {
       data(){
         return{
-          dataList:[0,0,0,0],
-          dataList1:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          dataList:[0,0,0],
+          dataList1:[0,0,0,0,0],
         }
       },
       components:{
-        'v-teacher-file-list':teacherFileList,
-        'v-teacher-chapter-list':teacherChapterList
+        'v-teacher-file-detail':teacherFileDetail,
       },
         mounted() {
         },
@@ -95,6 +109,11 @@
 
 <style scoped lang="less">
     @import "../../../assets/css/base.less";
+    .icon_add:before{
+      content: "\e724";
+      font-size:32px ;
+      font-weight: 400;
+    }
     .container{
       padding-top: 40px;
     }
@@ -120,6 +139,44 @@
         padding-top: 30px;
       }
     }
+  .nav{
+    width: 276px;
+    padding-top: 15px;
+  }
+  .info{
+    width:900px;
+    .title{
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 50px;
+    }
+    .item{
+      float: left;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .toll{
+    padding: 20px;
+    font-size: 14px;
+    color: #2F3142;
+    line-height: 60px;
+    span{
+      cursor: pointer;
+    }
+    .upload{
+      font-size: 18px;
+      color: rgba(47, 49, 66, 0.56);
+      background: #F9F9F9;
+      border: 1px solid #EEEEEE;
+      border-radius: 4px;
+      width: 207px;
+      height: 60px;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
 
 
 
