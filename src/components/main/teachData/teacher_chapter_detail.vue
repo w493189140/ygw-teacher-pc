@@ -69,41 +69,49 @@
           </div>
           <div class="toll clearfix">
             <span class="f_left upload icon_add iconfont">上传文件</span>
-            <span class="f_right">使用反馈</span>
+            <span class="f_right feedback-btn" @click="showFeedback=true">使用反馈</span>
           </div>
 
         </div>
       </div>
     </div>
+    <v-feedback v-if="showFeedback"></v-feedback>
   </div>
 </template>
 
 <script>
   import teacherFileDetail from '@/components/base/teacher-file-detail'
+  import feedback from '@/components/base/feedback'
+  import bus from '@/utils/bus'
     export default {
       data(){
         return{
           dataList:[0,0,0],
           dataList1:[0,0,0,0,0],
+          showFeedback:false
         }
       },
       components:{
         'v-teacher-file-detail':teacherFileDetail,
+        'v-feedback':feedback
       },
-        mounted() {
+      mounted() {
+        bus.$on('closeMask',e=>{
+          this.showFeedback = e
+        })
+      },
+      methods: {
+        handleOpen(key, keyPath) {
+          console.log(key, keyPath);
         },
-        methods: {
-          handleOpen(key, keyPath) {
-            console.log(key, keyPath);
-          },
-          handleClose(key, keyPath) {
-            console.log(key, keyPath);
-          },
-          handleSelect(key, keyPath) {
-            console.log(key, keyPath);
-          },
+        handleClose(key, keyPath) {
+          console.log(key, keyPath);
+        },
+        handleSelect(key, keyPath) {
+          console.log(key, keyPath);
+        },
 
-        }
+      }
     }
 </script>
 
@@ -174,6 +182,10 @@
       height: 60px;
       text-align: center;
       font-weight: 600;
+    }
+    .feedback-btn{
+      font-size: 14px;
+      color: #2F3142;
     }
   }
 

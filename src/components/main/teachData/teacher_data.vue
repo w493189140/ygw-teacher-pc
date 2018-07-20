@@ -10,16 +10,14 @@
     <div class="nav">
       <ul class="clearfix">
         <li class="name">类别：</li>
-        <li style="padding-left: 0" :class="{'active': navName=='全部'}" @click="changeNavData('全部')"><span>全部</span></li>
-        <li :class="{'active': navName=='体验课'}" @click="changeNavData('体验课')"><span>体验课</span></li>
+        <li style="padding-left: 0" :class="{'active': navName=='体验课'}" @click="changeNavData('体验课')"><span>体验课</span></li>
         <li :class="{'active': navName=='基础课'}" @click="changeNavData('基础课')"><span>基础课</span></li>
         <li :class="{'active': navName=='专业课'}" @click="changeNavData('专业课')"><span>专业课</span></li>
         <li :class="{'active': navName=='精品课'}" @click="changeNavData('精品课')"><span>精品课</span></li>
       </ul>
       <ul class="clearfix">
         <li class="name">年级：</li>
-        <li style="padding-left: 0" :class="{'active': navName=='全部'}" @click="changeNavData('全部')"><span>全部</span></li>
-        <li :class="{'active': navName=='K1'}" @click="changeNavData('K1')"><span>K1</span></li>
+        <li style="padding-left: 0" :class="{'active': navName=='K1'}" @click="changeNavData('K1')"><span>K1</span></li>
         <li :class="{'active': navName=='K2'}" @click="changeNavData('K2')"><span>K2</span></li>
         <li :class="{'active': navName=='K3'}" @click="changeNavData('K3')"><span>K3</span></li>
         <li :class="{'active': navName=='K4'}" @click="changeNavData('K4')"><span>K4</span></li>
@@ -34,8 +32,7 @@
       </ul>
       <ul class="clearfix">
         <li class="name">专题：</li>
-        <li style="padding-left: 0" :class="{'active': navName=='全部'}" @click="changeNavData('全部')"><span>全部</span></li>
-        <li :class="{'active': navName=='听读'}" @click="changeNavData('听读')"><span>听读</span></li>
+        <li style="padding-left: 0" :class="{'active': navName=='听读'}" @click="changeNavData('听读')"><span>听读</span></li>
         <li :class="{'active': navName=='思说'}" @click="changeNavData('思说')"><span>思说</span></li>
         <li :class="{'active': navName=='文笔'}" @click="changeNavData('文笔')"><span>文笔</span></li>
         <li :class="{'active': navName=='主题'}" @click="changeNavData('主题')"><span>主题</span></li>

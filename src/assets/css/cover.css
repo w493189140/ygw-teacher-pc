@@ -44,22 +44,25 @@ body,html{
   opacity: 1;
   background: #2dcbb5;
 }
-.login .el-checkbox__inner{
+body .el-checkbox__inner{
   border-radius: 50%;
 }
+/*login*/
+body .el-input__inner{
+  /*background-color: #F9F9F9;*/
+}
 
-
-
-.comment .el-textarea__inner{
+/*comment*/
+body .el-textarea__inner{
   font-size: 14px;
   color: rgba(47,49,66,1);
   line-height: 18px;
   border-radius: 4px;
-  background-color: #F9F9F9;
+  /*background-color: #F9F9F9;*/
   padding: 10px 15px;
 }
-
-.comment .el-textarea__inner::placeholder{
+/*comment*/
+body .el-textarea__inner::placeholder{
   color: rgba(47,49,66,0.56);
 }
 .el-breadcrumb__inner.is-link{

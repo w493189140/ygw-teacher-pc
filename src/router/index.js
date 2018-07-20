@@ -15,7 +15,6 @@ import teachChapter from '@/components/main/teachData/teacher_chapter'
 import teacherChapterDetail from '@/components/main/teachData/teacher_chapter_detail'
 import lookData from '@/components/main/lookData/look_data'
 import lookVideo from '@/components/main/lookData/look_video'
-import service from '@/components/main/service/service'
 import liveMain from '@/components/main/liveMain/live_main'
 import contribute from '@/components/main/contribute/contribute'
 import train from '@/components/main/train/train'
@@ -23,6 +22,15 @@ import trainChapter from '@/components/main/train/train_chapter'
 import trainChapterDatail from '@/components/main/train/train_chapter_datail'
 import trainVideo from '@/components/main/train/train_video'
 import personal from '@/components/main/personal/personal'
+import myVideo from '@/components/main/personal/my_video'
+import myFile from '@/components/main/personal/my_file'
+import myContribute from '@/components/main/personal/my_contribute'
+import myCollect from '@/components/main/personal/my_collect'
+
+import password from '@/components/main/personal/password'
+import phone from '@/components/main/personal/phone'
+import userHeadimg from '@/components/main/personal/user_headimg'
+import userInfo from '@/components/main/personal/user_info'
 
 //播放页 全屏
 // import play from '@/components/play/play'
@@ -74,6 +82,71 @@ export default new Router({
           meta: {
             title: '个人中心'
           },
+          children:[
+            {
+              path: '/',
+              component: myVideo,
+              meta: {
+                title: '个人中心'
+              }
+            },
+            {
+              path: 'myVideo',
+              component: myVideo,
+              meta: {
+                title: '个人中心'
+              }
+            },
+            {
+              path: 'myFile',
+              component: myFile,
+              meta: {
+                title: '个人中心'
+              }
+            },
+            {
+              path: 'myContribute',
+              component: myContribute,
+              meta: {
+                title: '个人中心'
+              }
+            },
+            {
+              path: 'myCollect',
+              component: myCollect,
+              meta: {
+                title: '个人中心'
+              }
+            },
+            {
+              path: 'password',
+              component: password,
+              meta: {
+                title: '个人中心'
+              }
+            },
+            {
+              path: 'phone',
+              component: phone,
+              meta: {
+                title: '个人中心'
+              }
+            },
+            {
+              path: 'userHeadimg',
+              component: userHeadimg,
+              meta: {
+                title: '个人中心'
+              }
+            },
+            {
+              path: 'userInfo',
+              component: userInfo,
+              meta: {
+                title: '个人中心'
+              }
+            },
+          ]
         },
         {
           path: '/notice',
@@ -173,13 +246,7 @@ export default new Router({
             title: '参考资料'
           },
         },
-        {
-          path: '/service',
-          component: service,
-          meta: {
-            title: '服务平台'
-          },
-        },
+
         {
           path: '/contribute',
           component: contribute,

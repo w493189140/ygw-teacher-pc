@@ -16,7 +16,7 @@
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path: '/personal' }">个人中心</el-breadcrumb-item>
-        <el-breadcrumb-item>{{navList[index-1]}}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{navList[index]}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="main clearfix w">
@@ -44,58 +44,61 @@
                 <span slot="title">我的收藏</span>
               </el-menu-item>
               <li class="line"></li>
+              <li class="title">账户安全</li>
               <el-menu-item index="5">
-                <span slot="title">账户安全</span>
-              </el-menu-item>
-              <el-menu-item index="6">
                 <span slot="title">修改资料</span>
               </el-menu-item>
-              <el-menu-item index="7">
+              <el-menu-item index="6">
                 <span slot="title">修改密码</span>
               </el-menu-item>
+              <el-menu-item index="7">
+                <span slot="title">修改手机号</span>
+              </el-menu-item>
+
             </el-menu>
           </el-col>
         </div>
-        <div class="f_right">
-
+        <div class="f_right content">
+             <router-view></router-view>
         </div>
     </div>
   </div>
 </template>
 
 <script>
-  import teacherFileList from '@/components/base/teacher-file-list'
-  import teacherChapterList from '@/components/base/teacher-chapter-list'
     export default {
       data(){
         return{
           avatarDefault:require("@/assets/image/Avatar_Default.png"),
-          navList:['我上传的视频','我上传的文件','我的投稿','我的收藏','账户安全','修改资料','修改密码'],
-          index:1
+          navList:['我上传的视频','我上传的文件','我的投稿','我的收藏','修改资料','修改密码','修改手机号','修改头像'],
+          index:1,
+          routerList:['/personal/myVideo','/personal/myFile','/personal/myContribute','/personal/myCollect','/personal/userInfo','/personal/password','/personal/phone','/personal/userHeadimg']
         }
       },
       components:{
-      },
-        mounted() {
-        },
-        methods: {
-          handleOpen(key, keyPath) {
-            console.log(key, keyPath);
-          },
-          handleClose(key, keyPath) {
-            console.log(key, keyPath);
-          },
-          handleSelect(key, keyPath) {
-            this.index = key
-          },
 
-        }
+      },
+      mounted() {
+      },
+      methods: {
+        handleOpen(key, keyPath) {
+          console.log(key, keyPath);
+        },
+        handleClose(key, keyPath) {
+          console.log(key, keyPath);
+        },
+        handleSelect(key, keyPath) {
+          this.index = key - 1
+          this.$router.push(this.routerList[this.index])
+
+        },
+
+      }
     }
 </script>
 
 <style scoped lang="less">
     @import "../../../assets/css/base.less";
-
     .user-info{
       width: 100%;
       height: 195px;
@@ -147,7 +150,16 @@
         background-color: rgba(170, 170, 170, 0.2);
         margin: 20px 0 20px 45px;
       }
+      .title{
+        font-size: 16px;
+        color: #2F3142;
+        margin-left: 44px;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
     }
-
+    .content{
+      width: 880px;
+    }
 
 </style>

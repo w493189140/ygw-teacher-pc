@@ -12,7 +12,10 @@
           <!--</li>-->
           <router-link class="head-nav" tag="li" to="/teachData">教学资料</router-link>
           <router-link class="head-nav" tag="li" to="/lookData">参考资料</router-link>
-          <router-link class="head-nav" tag="li" to="/service">教学服务</router-link>
+          <!--<router-link class="head-nav" tag="li" to="/service">教学服务</router-link>-->
+          <li>
+          <a href="http://101.132.238.30:8080/" target="_blank">教学服务</a>
+          </li>
         </ul>
       </div>
       <div class="f_right right-side">
