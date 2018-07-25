@@ -89,13 +89,13 @@ axios.interceptors.response.use(response => {
   return Promise.resolve(err.response)
 })
 
-localStorage.setItem('token','6a3c77c825d40e1502c1cb61f64cbaa7 0')
+// localStorage.setItem('token','6a3c77c825d40e1502c1cb61f64cbaa7 0')
 axios.defaults.baseURL = root
 console.log(root)
 //设置默认请求头
 axios.defaults.headers = {
   'X-Requested-With': 'XMLHttpRequest',
-  "ygwo_token":localStorage.getItem('token')||undefined
+  // "ygwo_token":localStorage.getItem('token')||undefined
 }
 axios.defaults.timeout = 10000
 

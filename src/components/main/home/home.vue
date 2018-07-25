@@ -1,52 +1,46 @@
 <template>
-  <div class="container w">
+  <div class="home w">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" @click="toActivity(1)">
-          <img src="./home_img_banner.png" alt="banner">
+        <div class="swiper-slide" v-for="(item,index) in bannerList" :key="index">
+          <img :src="item.slide_img" alt="banner">
         </div>
-        <!--<div class="swiper-slide" @click="toActivity(2)">Slide 2</div>-->
-        <!--<div class="swiper-slide" @click="toActivity(3)">Slide 3</div>-->
       </div>
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination"></div>
-
       <!-- 如果需要导航按钮 -->
       <div class="swiper-button-prev">
       </div>
       <div class="swiper-button-next">
       </div>
-
-      <!-- 如果需要滚动条 -->
-      <!--<div class="swiper-scrollbar"></div>-->
     </div>
     <div class="content clearfix">
       <div class="main f_left">
-        <div class="main-list" @click="toActivity(1)">
-          <div class="img-box f_left list-img" v-bind:style="{ backgroundImage: 'url('+testImg2+')' }">
+        <div v-for="(item,index) in activityList" :key="index" class="main-list" @click="toActivity(item.id)">
+          <div class="img-box f_left list-img  wow zoomInUp" v-bind:style="{ backgroundImage: 'url('+item.coverImg+')' }">
 
           </div>
           <div class="info f_right">
-            <h3 class="title">[新进导师培训]-课堂教学方法与教学能力提升</h3>
-            <p class="des">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
-            <div class="detail">
+            <h3 class="title  wow fadeInUp">{{item.title}}</h3>
+            <p class="des  wow fadeInUp" data-wow-delay="0.4s">{{item.describes}}</p>
+            <div class="detail  wow fadeInUp" data-wow-delay="0.8s">
               <span class="head-img img-box">
                 <img src="@/assets/image/Avatar_Default.png" alt="头像">
               </span>
-              <span class="name line">达芬奇</span>
-              <span class="line">2018-12-55 22:30</span>
-              <span class="iconfont icon_view">54545</span>
+              <span class="name line">{{item.author}}</span>
+              <span class="line">{{item.createTime|formatDate}}</span>
+              <span class="iconfont icon_view">{{item.readCount}}</span>
             </div>
           </div>
         </div>
-        <div class="main-list" @click="toActivity(1)">
-          <div class="img-box f_left list-img" v-bind:style="{ backgroundImage: 'url('+testImg3+')' }">
-            <!--<img src="../../testfile/home_img_cover_04.png" alt="">-->
+        <!--<div class="main-list" @click="toActivity(1)">
+          <div class="img-box f_left list-img  wow zoomInUp"  v-bind:style="{ backgroundImage: 'url('+testImg3+')' }">
+
           </div>
           <div class="info f_right">
-            <h3 class="title">[新进导师培训]-课堂教学方法与教学能力提升</h3>
-            <p class="des">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
-            <div class="detail">
+            <h3 class="title  wow fadeInUp">[新进导师培训]-课堂教学方法与教学能力提升</h3>
+            <p class="des  wow fadeInUp" data-wow-delay="0.4s">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
+            <div class="detail  wow fadeInUp" data-wow-delay="0.8s">
               <span class="head-img img-box">
                 <img src="@/assets/image/Avatar_Default.png" alt="头像">
               </span>
@@ -57,13 +51,13 @@
           </div>
         </div>
         <div class="main-list" @click="toActivity(1)">
-          <div class="img-box f_left list-img">
+          <div class="img-box f_left list-img  wow zoomInUp">
             <img :src="testImg2" alt="">
           </div>
           <div class="info f_right">
-            <h3 class="title">[新进导师培训]-课堂教学方法与教学能力提升课堂教学方法与教学能力提升课堂教学方法与教学能力提升课堂教学方法与教学能力提升课堂教学方法与教学能力提升课堂教学方法与教学能力提升</h3>
-            <p class="des">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
-            <div class="detail">
+            <h3 class="title  wow fadeInUp">[新进导师培训]-课堂教学方法与教学能力提升</h3>
+            <p class="des  wow fadeInUp" data-wow-delay="0.4s">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
+            <div class="detail  wow fadeInUp" data-wow-delay="0.8s">
               <span class="head-img img-box">
                 <img src="@/assets/image/Avatar_Default.png" alt="头像">
               </span>
@@ -74,13 +68,13 @@
           </div>
         </div>
         <div class="main-list" @click="toActivity(1)">
-          <div class="img-box f_left list-img">
+          <div class="img-box f_left list-img  wow zoomInUp">
             <img :src="testImg2" alt="">
           </div>
           <div class="info f_right">
-            <h3 class="title">111[新进导师培训]-课堂教学方法与教学能力提升</h3>
-            <p class="des">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
-            <div class="detail">
+            <h3 class="title  wow fadeInUp">[新进导师培训]-课堂教学方法与教学能力提升</h3>
+            <p class="des  wow fadeInUp" data-wow-delay="0.4s">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
+            <div class="detail  wow fadeInUp" data-wow-delay="0.8s">
               <span class="head-img img-box">
                 <img src="@/assets/image/Avatar_Default.png" alt="头像">
               </span>
@@ -91,13 +85,13 @@
           </div>
         </div>
         <div class="main-list" @click="toActivity(1)">
-          <div class="img-box f_left list-img">
+          <div class="img-box f_left list-img  wow zoomInUp" >
             <img :src="testImg3" alt="">
           </div>
           <div class="info f_right">
-            <h3 class="title">[新进导师培训]-课堂教学方法与教学能力提升</h3>
-            <p class="des">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
-            <div class="detail">
+            <h3 class="title  wow fadeInUp">[新进导师培训]-课堂教学方法与教学能力提升</h3>
+            <p class="des  wow fadeInUp" data-wow-delay="0.4s">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
+            <div class="detail  wow fadeInUp" data-wow-delay="0.8s">
               <span class="head-img img-box">
                 <img src="@/assets/image/Avatar_Default.png" alt="头像">
               </span>
@@ -108,24 +102,27 @@
           </div>
         </div>
         <div class="main-list"  @click="toActivity(1)">
-          <div class="img-box f_left list-img">
+          <div class="img-box f_left list-img  wow zoomInUp">
             <img src="../../testfile/home_img_cover_04.png" alt="">
           </div>
           <div class="info f_right">
-            <h3 class="title">[新进导师培训]-课堂教学方法与教学能力提升</h3>
-            <p class="des">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
-            <div class="detail">
+            <h3 class="title  wow fadeInUp">[新进导师培训]-课堂教学方法与教学能力提升</h3>
+            <p class="des  wow fadeInUp" data-wow-delay="0.4s">6月下半月以北上资金为代表的外资流出规模很小，A股下跌是外资小幅流出的原因，而不是结果。当前资本外流压力远小于2015-2016</p>
+            <div class="detail  wow fadeInUp" data-wow-delay="0.8s">
               <span class="head-img img-box">
                 <img src="@/assets/image/Avatar_Default.png" alt="头像">
               </span>
               <span class="name line">达芬奇</span>
               <span class="line">2018-12-55 22:30</span>
-              <span>眼睛 54545</span>
+              <span class="iconfont icon_view">54545</span>
             </div>
           </div>
-        </div>
-        <div class="load-more">
+        </div>-->
+        <div class="load-more" @click="loadMore" v-if="isShowMoreBtn">
           加载更多…
+        </div>
+        <div class="empty-more" v-if="!isShowMoreBtn">
+          暂无更多数据...
         </div>
       </div>
       <div class="news f_right">
@@ -148,31 +145,56 @@
 <script>
 import api from '@/api/api'
 import ajax from '@/utils/fetch.js'
+import { WOW } from 'wowjs'
+import {formatDate} from "@/assets/js/formatData";
+
 export default {
   data () {
     return {
-      testImg1:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531294752984&di=cfa05c9c2caa63d669fa4161f31256ab&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01445c59795648a8012193a3af1a35.jpg',
-      testImg2:'http://attachments.gfan.com/forum/201609/22/234117bss94l4mmm2zz4bw.jpg',
-      testImg3:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531292195523&di=e82acab0ccb7e0708cb17a744c14b87e&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201508%2F28%2F20150828223722_WeZ4z.jpeg',
-      testImg:require('../../testfile/home_img_cover_04.png'),
-
-      parems:{
-        id:'53',
-        type:'2'
-      }
+      // testImg1:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531294752984&di=cfa05c9c2caa63d669fa4161f31256ab&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01445c59795648a8012193a3af1a35.jpg',
+      // testImg2:'http://attachments.gfan.com/forum/201609/22/234117bss94l4mmm2zz4bw.jpg',
+      // testImg3:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531292195523&di=e82acab0ccb7e0708cb17a744c14b87e&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201508%2F28%2F20150828223722_WeZ4z.jpeg',
+      // testImg:require('../../testfile/home_img_cover_04.png'),
+      wow:{},
+      mySwiper:{},
+      activityCurrPage:1,
+      activityTotalPage:0,
+      isShowMoreBtn:true,
+      bannerList:[],
+      activityList:[],
+      newsList:[]
     }
   },
+  created(){
+
+  },
   mounted(){
-    this._initSweiper()
-    ajax.get(api.query_task_detail,this.parems).then((res)=>{
-        console.log(res.data)
-    })
+    this.loadBanner()
+    this.loadActivity()
+
+
   },
   components:{
 
   },
+  filters:{
+    formatDate(time){
+      let date = new Date(time)
+      return formatDate(date,'yyyy-MM-dd hh:ss')
+    }
+  },
   methods: {
+    _initWow(){
+      new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: false,
+        live: true
+      }).init()
+    },
     _initSweiper:function () {
+      var _this = this
       this.mySwiper = new Swiper ('.swiper-container', {
         loop: true,
         autoplay:true,
@@ -180,22 +202,75 @@ export default {
         pagination: {
           el: '.swiper-pagination',
         },
-
         // 如果需要前进后退按钮
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        on:{
+          click: function(e){
+            let realIndex = this.realIndex;
+            if(e.path[0].className =='swiper-button-next'||e.path[0].className =='swiper-button-prev'){
+              return
+            }
+             _this.toActivity(realIndex);
+          }
+        }
 
-        // // 如果需要滚动条
-        // scrollbar: {
-        //   el: '.swiper-scrollbar',
-        // },
+
       })
     },
+    loadBanner:function(){
+      var _this = this
+      //banner 图
+      let bannerParems = {
+        pageSize:4,
+        currPage:1
+      }
+      ajax.get(api.banner_home,bannerParems).then((res)=>{
+        // console.log(res)
+        this.bannerList = res.data.result
+        this.$nextTick(()=>{
+          _this._initSweiper()
+        })
+      })
+    },
+    loadActivity:function(){
+      //活动
+      var _this = this
+      let activityParems = {
+        pageSize:'4',
+        currPage:this.activityCurrPage
+      }
+      ajax.get(api.activity_home,activityParems).then((res)=>{
+        console.log(res.data.result.results)
+        _this.activityTotalPage = res.data.result.totalPage
+        if(_this.activityCurrPage<_this.activityTotalPage){
+          _this.activityCurrPage++
+        }else {
+          _this.isShowMoreBtn = false
+        }
+        this.activityList = this.activityList.concat(res.data.result.results)
+        if(_this.activityCurrPage==2){
+          this.$nextTick(()=>{
+            this._initWow()
+           // _this.wow.init()
+          })
+        }else {
+          //_this.wow ={}
+        }
+      })
+    },
+    loadNews:function(){
+
+    },
+    loadMore:function(){
+      this.loadActivity()
+    },
     toActivity:function (id) {
+      // alert(1)
       console.log(id)
-      this.$router.push('/activity')
+     this.$router.push('/activity')
     },
     toNotice:function (id) {
       console.log(id)

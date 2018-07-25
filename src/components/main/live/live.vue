@@ -223,6 +223,7 @@
         font-size: 24px;
         color: #FFFFFF;
         line-height: 60px;
+        .oneline;
       }
       .teacher {
         color: rgba(255, 255, 255, 0.57);

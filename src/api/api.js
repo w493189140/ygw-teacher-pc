@@ -1,6 +1,6 @@
 let urlList = {
-  login_in:'/user/login/password',
-  query_student_info:'/user/queryStudentInfo',
-  query_task_detail:'/curriculum/findHomeworkCompleteDetil',
+  activity_home:'/teacherActivity/queryActivity',
+  activity_detail_home:'/teacherActivity/queryActivityDetil',
+  banner_home:'/teacherActivity/queryTeacherInfo',
 }
 export default urlList

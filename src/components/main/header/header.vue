@@ -65,6 +65,11 @@
 <style scoped lang="less">
   @import "../../../assets/css/base.less";
   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1999;
     font-size: 16px;
     height: 70px;
     border-bottom: 1px solid #e7e7e7;

@@ -13,7 +13,7 @@
             <span class="head-img img-box f_left"><img :src="avatarDefault" alt="头像"></span>
             <span class="name f_left">葫芦娃</span>
           </div>
-          <div class="f_right number iconfont icon_play">142</div>
+          <div class="f_right number iconfont icon_view">142</div>
         </div>
       </div>
     </div>
@@ -33,6 +33,10 @@
   @import "../../assets/css/base";
   .icon_play:before {
     content: '\e75c'
+  }
+  .icon_view:before {
+    content: '\e776';
+    font-size: 18px;
   }
   .list{
     width: 280px;

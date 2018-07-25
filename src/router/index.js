@@ -2,43 +2,45 @@ import Vue from 'vue'
 import Router from 'vue-router'
 //主页 版心
 import main from '@/components/main/main'
+//首页
 import home from '@/components/main/home/home'
 import activity from '@/components/main/home/activity'
 import notice from '@/components/main/home/notice'
+//培训
+import train from '@/components/main/train/train'
+import trainChapter from '@/components/main/train/train_chapter'
+import trainChapterDatail from '@/components/main/train/train_chapter_datail'
+import trainVideo from '@/components/main/train/train_video'
+//播放页
 import live from '@/components/main/live/live'
 import play from '@/components/main/live/play'
+//教学资料
 import classData from '@/components/main/teachData/class_data'
 import personalData from '@/components/main/teachData/personal_data'
 import classChapter from '@/components/main/teachData/class_chapter'
 import teachData from '@/components/main/teachData/teacher_data'
 import teachChapter from '@/components/main/teachData/teacher_chapter'
 import teacherChapterDetail from '@/components/main/teachData/teacher_chapter_detail'
+//参考资料
 import lookData from '@/components/main/lookData/look_data'
 import lookVideo from '@/components/main/lookData/look_video'
 import liveMain from '@/components/main/liveMain/live_main'
-import contribute from '@/components/main/contribute/contribute'
-import train from '@/components/main/train/train'
-import trainChapter from '@/components/main/train/train_chapter'
-import trainChapterDatail from '@/components/main/train/train_chapter_datail'
-import trainVideo from '@/components/main/train/train_video'
+//个人中心
 import personal from '@/components/main/personal/personal'
 import myVideo from '@/components/main/personal/my_video'
 import myFile from '@/components/main/personal/my_file'
 import myContribute from '@/components/main/personal/my_contribute'
 import myCollect from '@/components/main/personal/my_collect'
-
+//个人中心 ==>安全模块
 import password from '@/components/main/personal/password'
 import phone from '@/components/main/personal/phone'
 import userHeadimg from '@/components/main/personal/user_headimg'
 import userInfo from '@/components/main/personal/user_info'
-
-//播放页 全屏
-// import play from '@/components/play/play'
-
-
+//上传投稿
+import contribute from '@/components/main/contribute/contribute'
+import contributeLite from '@/components/main/contribute/contribute_lite'
 //login page
 import login from '@/components/login/login'
-
 //error page
 import error from '@/components/error/error'
 
@@ -254,6 +256,13 @@ export default new Router({
             title: '投稿'
           },
         },
+        {
+          path: '/contributeLite',
+          component: contributeLite,
+          meta: {
+            title: '投稿'
+          },
+        },
 
       ]
     },
@@ -271,13 +280,7 @@ export default new Router({
         title: '视频回放'
       }
     },
-    {
-      path: '/play',
-      component: play,
-      meta: {
-        title: '视频点播'
-      }
-    },
+
     {
       path: '/login',
       component: login,

@@ -74,6 +74,7 @@
       right: 8px;
       width: 64px;
       height:26px;
+      border-radius: 3px;
       line-height: 26px;
       color: #fff;
       text-align: center;

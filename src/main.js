@@ -4,6 +4,8 @@ import App from './App'
 import router from './router'
 //全局css
 import '@/assets/css/reset.css'
+//animate
+import 'animate.css'
 //elemet ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';

@@ -2,6 +2,9 @@ body,html{
   height: 100%;
   min-width: 1180px;
 }
+
+.wow { visibility: hidden; }
+
 .load-more{
   width: 100%;
   height: 60px;
@@ -16,6 +19,13 @@ body,html{
   cursor: pointer;
   transition: all 0.2s;
 
+}
+.empty-more{
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  text-align: center;
 }
 .load-more:hover{
    color: #2dcbb5;
@@ -40,6 +50,12 @@ body,html{
 .header .el-input__icon{
   line-height: 35px;
 }
+ .el-dropdown-menu__item:focus,
+ .el-dropdown-menu__item:not(.is-disabled):hover {
+  background-color: #fff;
+}
+
+
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: #2dcbb5;
@@ -80,4 +96,40 @@ body .el-textarea__inner::placeholder{
 
 .live .prism-player {
   background-color: #2e2e36;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0.6;
+    -webkit-transform: translate3d(0, 15%, 0);
+    transform: translate3d(0, 15%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0.7;
+    transform: scale3d(0.9, 0.9, 0.9) translate3d(0, 10px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale3d(0.95, 0.95, 0.95) translate3d(0, -5px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.zoomInUp {
+  animation-name: zoomInUp;
 }

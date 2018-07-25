@@ -9,6 +9,7 @@
     </div>
     <div class="main">
       <h3 class="title">新进教师教学核心素养培训-这里显示活动标题</h3>
+      <p class="des">我是描述 因为你之前的零散需求，有些确实本来就是零散的，比如一些小的改进、bug的处理，但有些是从大的需求里面拆解出来的。 因为你之前的零散需求，有些确实本来就是零散的，比如一些小的改进、bug的处理，但有些是从大的需求里面拆解出来的。 因为你之前的零散需求，有些确实本来就是零散的，比如一些小的改进、bug的处理，但有些是从大的需求里面拆解出来的。 因为你之前的零散需求，有些确实本来就是零散的，比如一些小的改进、bug的处理，但有些是从大的需求里面拆解出来的。</p>
       <div class="detail clearfix">
               <span class="head-img img-box">
                 <img src="@/assets/image/Avatar_Default.png" alt="头像">
@@ -56,8 +57,14 @@
     .title{
       font-size: 22px;
       color: #2F3142;
-      line-height: 76px;
+      line-height: 40px;
+      margin-top: 20px;
       font-weight: 600;
+    }
+    .des{
+      font-size: 16px;
+      color: #2F3142;
+      margin-bottom: 10px;
     }
     .detail{
       span{

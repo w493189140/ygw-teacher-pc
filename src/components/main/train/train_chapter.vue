@@ -18,14 +18,15 @@
           </span>
         </p>
       <div class="chapter clearfix">
-        <v-trainChapterList class="item" @click.native="toChapterDatail" v-for="(item ,index) in dataList" :key="index" :data="item"></v-trainChapterList>
+        <v-teacher-chapter-list class="item" @click.native="toChapterDatail" v-for="(item ,index) in dataList" :key="index" :data="item"></v-teacher-chapter-list>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import trainChapterList from '@/components/base/train-chapter-list'
+  // import trainChapterList from '@/components/base/train-chapter-list'
+  import teacherChapterList from '@/components/base/teacher-chapter-list'
   export default {
     data(){
       return{
@@ -37,7 +38,8 @@
       }
     },
     components:{
-        'v-trainChapterList':trainChapterList
+        // 'v-trainChapterList':trainChapterList
+      'v-teacher-chapter-list':teacherChapterList
     },
     mounted(){
       this._initDes()

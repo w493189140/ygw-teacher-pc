@@ -68,7 +68,7 @@
             </div>
           </div>
           <div class="toll clearfix">
-            <span class="f_left upload icon_add iconfont">上传文件</span>
+            <span class="f_left upload icon_add iconfont" @click="toContribute">上传文件</span>
             <span class="f_right feedback-btn" @click="showFeedback=true">使用反馈</span>
           </div>
 
@@ -110,7 +110,9 @@
         handleSelect(key, keyPath) {
           console.log(key, keyPath);
         },
-
+        toContribute(){
+          this.$router.push('/contributeLite')
+        }
       }
     }
 </script>

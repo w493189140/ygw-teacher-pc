@@ -24,26 +24,6 @@
             </el-input>
           </div>
         </div>
-        <div class="item clearfix">
-          <div class="f_left lable">封面图 ：</div>
-          <div class="f_left value">
-            <div class="img-box cover-img f_left">
-              <img :src="imgDefault" alt="图片">
-            </div>
-            <el-button class="choice-img" type="info" plain>选择图片</el-button>
-          </div>
-        </div>
-        <div class="item clearfix fullscreen">
-          <div class="f_left lable">正文 ：</div>
-          <div class="f_left value">
-            <el-input
-              type="textarea"
-              :rows="4"
-              placeholder="请输入内容"
-              v-model="textarea">
-            </el-input>
-          </div>
-        </div>
         <div class="item clearfix fullscreen">
           <div class="f_left lable"></div>
          <div class="f_left value">

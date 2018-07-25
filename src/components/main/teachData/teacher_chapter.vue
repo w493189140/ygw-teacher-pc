@@ -9,7 +9,7 @@
     <div class="main">
       <h3 class="title">新进教师教学核心素养——教学认知</h3>
       <p class="des">针对高校新进教师大多对高等教育学、高等教育心理学的基本知识缺乏了解的现状</p>
-      <div class="toll clearfix">
+      <div class="toll clearfix" v-if="false">
         <router-link tag="span" to="/classData">班级作品册</router-link>
         <router-link tag="span" to="/personalData">学员作品册</router-link>
       </div>

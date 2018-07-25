@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="containerbox">
     <v-header></v-header>
     <v-sidebar></v-sidebar>
     <router-view></router-view>
@@ -34,7 +34,8 @@ export default {
 
 <style scoped lang="less">
   @import "../../assets/css/base.less";
-  .container{
+  .containerbox{
     padding-bottom: 100px;
+    padding-top: 70px;
   }
 </style>
